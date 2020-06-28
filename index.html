@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="author" content="Alejandro Maglio - Alberto Pizzi - Nicolás Werner" />
+
+<meta name="date" content="2020-11-06" />
+
+<title>Análisis De Eventos Cardiovasculares</title>
+<!-- Material Design fonts -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
+<script src="site_libs/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
+<link href="site_libs/bootstrap_material-0.1/bootstrap-material-design.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap_material-0.1/ripples.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap_material-0.1/material.min.js"></script>
+<script src="site_libs/bootstrap_material-0.1/ripples.min.js"></script>
+<link href="site_libs/material-0.1/material.css" rel="stylesheet" />
+<script src="site_libs/material-0.1/material.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.9.2.1/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+
+
+
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("toc");
+});
+</script>
+
+<!-- code folding -->
+
+</head>
+
+<body>
+
+<div class="header-panel shadow z-2">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3">
+        <div id="header">
+    <h1 class="title">Análisis De Eventos Cardiovasculares</h1>
+                <h4 class="author">Alejandro Maglio - Alberto Pizzi - Nicolás Werner</h4>
+                <h4 class="date">11/06/2020</h4>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<div class="container-fluid main-container">
+    <div class="row">
+      <nav class="col-xs-3 menu">
+        <div id="toc">
+        <ul>
+        <li><a href="#introducción">Introducción</a></li>
+        <li><a href="#visualización-de-los-datos">Visualización De Los Datos</a></li>
+        </ul>
+        </div>
+        
+        
+        
+      </nav>
+     <div class="pages col-xs-9">
+     <div class="row">
+       <div class="col-xs-10">
+
+
+
+<div id="introducción" class="section level1 unnumbered unnumbered">
+<h1>Introducción</h1>
+<p>En la siguiente presentación, se analizará tanto gráficamente como analíticamente ciertos datos de personas con riesgo a padecer eventos cardiovasculares. Estos datos fueron provistos por el Hospital Austral, en base a 1002 casos en los cuales el paciente se presentó en el hospital con síntomas asociados a un evento cardiovascular, pero que no necesariamente haya, posteriormente, sufrido un evento. Con estos datos se busca poder mostrar que características son determinantes para saber si el paciente debe ser internado de urgencia o no.</p>
+</div>
+<div id="visualización-de-los-datos" class="section level1 unnumbered unnumbered">
+<h1>Visualización De Los Datos</h1>
+<p>A continuación, se mostrarán los tipos de datos que se eligieron.</p>
+<p><img src="index_files/figure-html/grafT1-1.png" width="576" /></p>
+<div id="análisis-de-pacientes-por-presencia-de-eventos" class="section level2 tabset tabset-fade tabset-pills un">
+<h2>Análisis de Pacientes por Presencia de Eventos</h2>
+<p>A continuación, vamos a observar el porcentaje de personas que padecen eventos y como afecta la edad este porcentaje</p>
+<div id="eventos-cardíacos-totales" class="section level3 unnumbered un">
+<h3>Eventos Cardíacos Totales</h3>
+<p>Este gráfico muestra la cantidad de personas que padecieron eventos cardiovasculares y el porcentaje de personas que no han padecido eventos.</p>
+<p><img src="index_files/figure-html/porcentajeEventos-1.png" width="576" /></p>
+<pre><code>     PacientesConEventos PacientesSinEventos
+[1,]                 121                 881</code></pre>
+</div>
+<div id="eventos-analizados-por-edad" class="section level3 unnumbered un">
+<h3>Eventos Analizados Por Edad</h3>
+<p>En este gráfico está representado las diferentes edades de las personas que sufrieron algún evento.</p>
+<div id="htmlwidget-60c3f124c6acd2daef29" style="width:576px;height:576px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-60c3f124c6acd2daef29">{"x":{"visdat":{"412448241a63":["function () ","plotlyVisDat"]},"cur_data":"412448241a63","attrs":{"412448241a63":{"marker":{"color":"red"},"line":{"color":"white","width":2},"alpha":0.6,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":[66,53,87,77,57,59,66,76,76,47,80,72,49,67,74,67,75,62,75,40,48,50,34,83,51,39,70,45,72,69,56,79,63,66,68,58,60,51,67,60,71,60,53,72,79,60,53,62,43,36,70,66,48,67,51,62,68,68,49,46,66,63,67,88,73,56,75,69,69,56,72,75,65,54,57,57,56,62,83,58,63,45,47,57,50,65,71,49,42,55,74,60,79,80,63,70,47,48,89,41,52,72,88,51,47,54,76,50,40,56,40,57,68,78,71,69,70,77,70,71,81],"type":"histogram","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"barmode":"overlay","title":"Eventos Por edad","xaxis":{"domain":[0,1],"automargin":true,"title":"Edad"},"yaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"marker":{"color":"red","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"white","width":2},"x":[66,53,87,77,57,59,66,76,76,47,80,72,49,67,74,67,75,62,75,40,48,50,34,83,51,39,70,45,72,69,56,79,63,66,68,58,60,51,67,60,71,60,53,72,79,60,53,62,43,36,70,66,48,67,51,62,68,68,49,46,66,63,67,88,73,56,75,69,69,56,72,75,65,54,57,57,56,62,83,58,63,45,47,57,50,65,71,49,42,55,74,60,79,80,63,70,47,48,89,41,52,72,88,51,47,54,76,50,40,56,40,57,68,78,71,69,70,77,70,71,81],"type":"histogram","error_y":{"color":"rgba(31,119,180,0.6)"},"error_x":{"color":"rgba(31,119,180,0.6)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="análisis-de-edad-por-3-grupos" class="section level3 unnumbered un">
+<h3>Análisis De Edad Por 3 Grupos</h3>
+<p><img src="index_files/figure-html/graficoEdadesGRUPOS-1.png" width="576" /></p>
+</div>
+</div>
+<div id="analisis-de-presencia-de-eventos-por-el-factor-de-obesidad" class="section level2 tabset tabset-fade tabset-pills">
+<h2>Analisis de presencia de Eventos por el factor de Obesidad</h2>
+<p>Ahora vamos a observar cómo influye la obesidad al respecto de la cantidad de eventos, analizando la diabetes y la obesidad.</p>
+<div id="obesos" class="section level3 unnumbered unnumbered">
+<h3>Obesos</h3>
+<p>En este gráfico puede verse representado el porcentaje de personas que padecen obesidad y que sufrieron algún evento cardiovascular.</p>
+<p><img src="index_files/figure-html/obesosCEve-1.png" width="576" /></p>
+<pre><code>     CantidadDeObesos CantidadDeNoObesos
+[1,]              222                780</code></pre>
+</div>
+<div id="obesos-diabéticos-con-eventos" class="section level3 unnumbered unnumbered">
+<h3>Obesos Diabéticos Con Eventos</h3>
+<p>En este gráfico, a partir de los obesos que sufrieron un evento se muestra cuantos de estos son diabéticos.</p>
+<p><img src="index_files/figure-html/ObesosYDiabeticos-1.png" width="576" /></p>
+<pre><code>     CantidadDeObesos CantidadDeObesosConDiabetes
+[1,]              222                          65</code></pre>
+</div>
+</div>
+<div id="eventos-analizados-por-revascularización-cantidad-de-episodios-repetición-del-dolor" class="section level2 unnumbered unnumbered">
+<h2>Eventos Analizados Por Revascularización, Cantidad De Episodios &amp; Repetición Del Dolor</h2>
+<p>En este gráfico podemos ver el porcentaje de las personas que tuvieron eventos y que también sufrieron de episodios previos con repeticiones de dolores y que fueron re vascularizados.</p>
+<p><img src="index_files/figure-html/graficoRegCantE-1.png" width="576" /></p>
+</div>
+<div id="dolores" class="section level2 tabset tabset-fade tabset-pills uno">
+<h2>Dolores</h2>
+<p>En los siguientes dos gráficos, se ven representados el total de dolores y de que tipo son estos, y además en el segundo grafico se tomaron los dolores de personas que hayan sufrido algún evento.</p>
+<div id="dolores-totales" class="section level3 unnumbered uno">
+<h3>Dolores Totales</h3>
+<p><img src="index_files/figure-html/grafDoloresTot-1.png" width="576" /></p>
+</div>
+<div id="dolores-solo-con-personas-con-eventos-card" class="section level3 unnumbered uno">
+<h3>Dolores Solo Con Personas Con Eventos Card</h3>
+<p><img src="index_files/figure-html/grafDoloresConEv-1.png" width="576" /></p>
+</div>
+</div>
+<div id="tabaquismo-e-hipertensión" class="section level2">
+<h2>Tabaquismo e Hipertensión</h2>
+<p>En este gráfico, lo que se muestra es la relación entre la cantidad de personas que sufrieron un Evento, fuman tabaco y son Hipertensas. En cada burbuja se muestra la cantidad de personas que sufren tal característica y si se cruzan, muestra las personas que tienen ambos rasgos.</p>
+<p><img src="index_files/figure-html/grafDeVenn2-1.png" width="576" /></p>
+</div>
+<div id="anginosos-vs-múltiples-dolores" class="section level2 unnumbered unnumbered">
+<h2>Anginosos VS Múltiples Dolores</h2>
+<p>En el siguiente gráfico se busca mostrar cuantos pacientes que sufrieron de un Evento, presentan Síndrome Anginoso y cuantos presentan Múltiples Dolores. <img src="index_files/figure-html/angiVSMultDol-1.png" width="576" /></p>
+</div>
+</div>
+
+    </div>
+    <div class="col-xs-2">
+        </div>
+  </div>
+  </div>
+  </div>
+  <div class="row">
+    </div>
+  </div>
+
+<script>
+$(document).ready(function () {
+  // add bootstrap table styles to pandoc tables
+  $('tr.header').parent('thead').parent('table').addClass('table table-striped table-hover');
+
+    var images = $('.pages img');
+  images.filter(function() {
+      if ($(this).parent().attr("class") == "figure") {
+          return(false)
+      } else {
+          return(true);
+      }
+  }).wrap("<div class='figure'></div>");
+  images.addClass("image-thumb").wrap("<div class='panel-body'></div>");
+  $('.figure p.caption').wrap("<div class='panel-footer'></div>");
+  $('.figure').addClass('panel panel-default');
+  
+    $('.pages img')
+ 	  .addClass("image-lb");
+  $('.pages').magnificPopup({
+	      type:'image',
+	      closeOnContentClick: false,
+	      closeBtnInside: false,
+        delegate: 'img',
+	      gallery: {enabled: false },
+          removalDelay: 500,
+          callbacks: {
+              beforeOpen: function() {
+                // just a hack that adds mfp-anim class to markup
+                this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+              }
+          },
+          mainClass: 'mfp-move-from-top',
+	      image: {
+	        verticalFit: true,
+            titleSrc: 'alt'
+	      }
+ 	    });
+ 	
+    
+    $('#toc ul li').first().addClass("active");
+    $('#toc ul li').attr("data-target", function() {
+        return($(this).children("a").attr("href"));
+    })
+    $('body .section.level1').first().addClass("active");
+    $('body .section.level1').not('.active').hide();
+    
+    $('#toc a[href*="#"]').click(function() {
+
+      var id = $(this).attr("href");
+      if (id === "#") return;
+      if (id.substring(0, 8) === "#dyntab-") return;
+      toggle_page(id);
+
+      // Menu
+      var menu_entry = $(".menu li[data-target='"+id+"']");
+      menu_entry.addClass("active");
+      $(".menu li").not(menu_entry).removeClass("active"); 
+      
+
+    });
+
+    function toggle_page(id) {
+      $(".page").not(page).removeClass("active").hide();
+      window.page = id;
+      var page = $(window.page);
+      window.location.hash = window.page;
+      //$(this).addClass("active");
+
+      page.show();
+
+      var totop = setInterval(function () {
+        $(".pages").animate({scrollTop: 0}, 0);
+      }, 10);
+
+      setTimeout(function () {
+        page.addClass("active");
+        setTimeout(function () {
+          clearInterval(totop);
+        }, 1000);
+      }, 100);
+
+      window.dispatchEvent(new Event('resize'));
+
+    }
+
+
+    $(".menu li").click(function () {
+
+      toggle_page($(this).data("target"));
+
+      // Menu
+      if (!$(this).data("target")) return;
+      if ($(this).is(".active")) return;
+      $(".menu li").not($(this)).removeClass("active");
+      $(this).addClass("active");
+
+    });
+  
+    
+
+
+    window.page = window.location.hash;
+    if (window.page != "") {
+      $(".menu").find("li[data-target=" + window.page + "]").trigger("click");
+    }
+
+    /* init material bootstrap js */
+    $.material.init();
+});
+</script>
+
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
