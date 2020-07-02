@@ -77,6 +77,7 @@ $(document).ready(function () {
         <ul>
         <li><a href="#introducción">Introducción</a></li>
         <li><a href="#visualización-de-los-datos">Visualización De Los Datos</a></li>
+        <li><a href="#predictor">Predictor</a></li>
         </ul>
         </div>
         
@@ -95,11 +96,11 @@ $(document).ready(function () {
 </div>
 <div id="visualización-de-los-datos" class="section level1 unnumbered unnumbered">
 <h1>Visualización De Los Datos</h1>
-<p>A continuación, se mostrarán los tipos de datos que se eligieron.</p>
+<p>A continuación, se mostrarán los distintos tipos de datos que se eligieron para el análisis.</p>
 <p><img src="index_files/figure-html/grafT1-1.png" width="576" /></p>
 <div id="análisis-de-pacientes-por-presencia-de-eventos" class="section level2 tabset tabset-fade tabset-pills un">
 <h2>Análisis de Pacientes por Presencia de Eventos</h2>
-<p>A continuación, vamos a observar el porcentaje de personas que padecen eventos y como afecta la edad este porcentaje</p>
+<p>A continuación, vamos a observar el porcentaje de personas que padecen eventos y cómo la edad influye sobre este porcentaje.</p>
 <div id="eventos-cardíacos-totales" class="section level3 unnumbered un">
 <h3>Eventos Cardíacos Totales</h3>
 <p>Este gráfico muestra la cantidad de personas que padecieron eventos cardiovasculares y el porcentaje de personas que no han padecido eventos.</p>
@@ -109,59 +110,92 @@ $(document).ready(function () {
 </div>
 <div id="eventos-analizados-por-edad" class="section level3 unnumbered un">
 <h3>Eventos Analizados Por Edad</h3>
-<p>En este gráfico está representado las diferentes edades de las personas que sufrieron algún evento.</p>
+<p>En este gráfico se representan las distintas edades de las personas que sufrieron algún evento.</p>
 <div id="htmlwidget-60c3f124c6acd2daef29" style="width:576px;height:576px;" class="plotly html-widget"></div>
 <script type="application/json" data-for="htmlwidget-60c3f124c6acd2daef29">{"x":{"visdat":{"412448241a63":["function () ","plotlyVisDat"]},"cur_data":"412448241a63","attrs":{"412448241a63":{"marker":{"color":"red"},"line":{"color":"white","width":2},"alpha":0.6,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":[66,53,87,77,57,59,66,76,76,47,80,72,49,67,74,67,75,62,75,40,48,50,34,83,51,39,70,45,72,69,56,79,63,66,68,58,60,51,67,60,71,60,53,72,79,60,53,62,43,36,70,66,48,67,51,62,68,68,49,46,66,63,67,88,73,56,75,69,69,56,72,75,65,54,57,57,56,62,83,58,63,45,47,57,50,65,71,49,42,55,74,60,79,80,63,70,47,48,89,41,52,72,88,51,47,54,76,50,40,56,40,57,68,78,71,69,70,77,70,71,81],"type":"histogram","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"barmode":"overlay","title":"Eventos Por edad","xaxis":{"domain":[0,1],"automargin":true,"title":"Edad"},"yaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"marker":{"color":"red","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"white","width":2},"x":[66,53,87,77,57,59,66,76,76,47,80,72,49,67,74,67,75,62,75,40,48,50,34,83,51,39,70,45,72,69,56,79,63,66,68,58,60,51,67,60,71,60,53,72,79,60,53,62,43,36,70,66,48,67,51,62,68,68,49,46,66,63,67,88,73,56,75,69,69,56,72,75,65,54,57,57,56,62,83,58,63,45,47,57,50,65,71,49,42,55,74,60,79,80,63,70,47,48,89,41,52,72,88,51,47,54,76,50,40,56,40,57,68,78,71,69,70,77,70,71,81],"type":"histogram","error_y":{"color":"rgba(31,119,180,0.6)"},"error_x":{"color":"rgba(31,119,180,0.6)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>A partir de este gráfico se observa que los pacientes menores a treinta años no presentaron ningún tipo de evento, y que entre los treinta y cuarenta años tan solo 7 personas presentaron un evento. Además, se observa que la mayor cantidad de eventos se presentó entre los cuarenta y ochenta años.</p>
 </div>
 <div id="análisis-de-edad-por-3-grupos" class="section level3 unnumbered un">
 <h3>Análisis De Edad Por 3 Grupos</h3>
+<p>Aquí pueden verse la cantidad de casos diferenciados por los rangos de edad.</p>
 <p><img src="index_files/figure-html/graficoEdadesGRUPOS-1.png" width="576" /></p>
+<pre><code>     TotalDe1740 TotalDe4060 TotalDe60plus
+[1,]           3          46            72</code></pre>
+<p>Se puede ver como a medida que la edad va aumentando, también va aumentando, exponencialmente, el riesgo de padecer un evento cardíaco.</p>
 </div>
 </div>
-<div id="analisis-de-presencia-de-eventos-por-el-factor-de-obesidad" class="section level2 tabset tabset-fade tabset-pills">
-<h2>Analisis de presencia de Eventos por el factor de Obesidad</h2>
-<p>Ahora vamos a observar cómo influye la obesidad al respecto de la cantidad de eventos, analizando la diabetes y la obesidad.</p>
+<div id="análisis-del-impacto-de-la-diabetes-y-la-obesidad-en-los-eventos" class="section level2 tabset tabset-fade tabset-pills">
+<h2>Análisis Del Impacto De La Diabetes Y La Obesidad En Los Eventos</h2>
+<p>Ahora vamos a observar cómo la obesidad influye sobre la cantidad de eventos. A su vez, se analizará la relación que se puede encontrar entre la diabetes y la obesidad, en relación con la posibilidad de padecer un evento.</p>
 <div id="obesos" class="section level3 unnumbered unnumbered">
 <h3>Obesos</h3>
-<p>En este gráfico puede verse representado el porcentaje de personas que padecen obesidad y que sufrieron algún evento cardiovascular.</p>
+<p>En este gráfico puede verse representado el total de casos y la cantidad de obesos que se encuentran y luego, puede verse el total de pacientes con eventos y cuantos de esos pacientes padecían de obesidad.</p>
 <p><img src="index_files/figure-html/obesosCEve-1.png" width="576" /></p>
 <pre><code>     CantidadDeObesos CantidadDeNoObesos
 [1,]              222                780</code></pre>
 </div>
-<div id="obesos-diabéticos-con-eventos" class="section level3 unnumbered unnumbered">
-<h3>Obesos Diabéticos Con Eventos</h3>
-<p>En este gráfico, a partir de los obesos que sufrieron un evento se muestra cuantos de estos son diabéticos.</p>
+<div id="diabéticos-con-y-sin-eventos" class="section level3 unnumbered unnumbered">
+<h3>Diabéticos Con Y Sin Eventos</h3>
+<p>Ahora, se muestra el gráfico de los pacientes diabéticos que no padecieron eventos y los que padecieron un evento.</p>
+<p><img src="index_files/figure-html/Diabeticos%20-1.png" width="576" /></p>
+<pre><code>     cantidadaDBT cantidadDBTsinEventos cantidadDBTconEventos
+[1,]          114                    82                    32</code></pre>
+</div>
+<div id="obesos-con-eventos-diferenciados-por-diabetes" class="section level3 unnumbered unnumbered">
+<h3>Obesos Con Eventos Diferenciados Por Diabetes</h3>
+<p>En este gráfico, a partir de los obesos que sufrieron un evento, se muestra cuantos de estos son diabéticos.</p>
 <p><img src="index_files/figure-html/ObesosYDiabeticos-1.png" width="576" /></p>
 <pre><code>     CantidadDeObesos CantidadDeObesosConDiabetes
 [1,]              222                          65</code></pre>
+<p>Se puede ver que, de los pacientes con obesidad que sufrieron de un evento, un 30% de estos era además diabético. Por lo que podemos observar que el ser obeso y diabético genera una alta probabilidad de sufrir algún evento</p>
 </div>
 </div>
-<div id="eventos-analizados-por-revascularización-cantidad-de-episodios-repetición-del-dolor" class="section level2 unnumbered unnumbered">
-<h2>Eventos Analizados Por Revascularización, Cantidad De Episodios &amp; Repetición Del Dolor</h2>
+<div id="eventos-analizados-por-revascularización-cantidad-de-episodios-y-repetición-del-dolor" class="section level2 unnumbered unnumbered">
+<h2>Eventos Analizados Por Revascularización, Cantidad De Episodios Y Repetición Del Dolor</h2>
 <p>En este gráfico podemos ver el porcentaje de las personas que tuvieron eventos y que también sufrieron de episodios previos con repeticiones de dolores y que fueron re vascularizados.</p>
-<p><img src="index_files/figure-html/graficoRegCantE-1.png" width="576" /></p>
+<p><img src="index_files/figure-html/graficoRegCantE-1.png" width="576" /> Se buscó analizar si el haber padecido el conjunto de estas de estas tres características influye sobre los eventos totales. Se puede ver que el 13% de los pacientes que padecieron eventos sufrieron de el conjunto de estas condiciones.</p>
 </div>
-<div id="dolores" class="section level2 tabset tabset-fade tabset-pills uno">
-<h2>Dolores</h2>
-<p>En los siguientes dos gráficos, se ven representados el total de dolores y de que tipo son estos, y además en el segundo grafico se tomaron los dolores de personas que hayan sufrido algún evento.</p>
-<div id="dolores-totales" class="section level3 unnumbered uno">
-<h3>Dolores Totales</h3>
-<p><img src="index_files/figure-html/grafDoloresTot-1.png" width="576" /></p>
-</div>
-<div id="dolores-solo-con-personas-con-eventos-card" class="section level3 unnumbered uno">
-<h3>Dolores Solo Con Personas Con Eventos Card</h3>
-<p><img src="index_files/figure-html/grafDoloresConEv-1.png" width="576" /></p>
-</div>
+<div id="tipos-de-dolores" class="section level2 tabset tabset-fade tabset-pills uno">
+<h2>Tipos De Dolores</h2>
+<p>En el siguiente gráfico se ve representado el total de dolores y de que tipo son estos, y además en la barra a la izquierda se muestra los dolores de personas que hayan sufrido algún evento.</p>
+<p><img src="index_files/figure-html/grafDoloresTot-1.png" width="576" /> Con estos datos se observa que el 15% de los pacientes que se presentaron con un dolor Opresivo terminó sufriendo un evento. El 12% que se presentaron con acidez sufrieron de un evento. Y el 8% de los pacientes que se presentaron con un dolor del tipo de puntada, sufrieron de un evento. Se puede ver que tanto los pacientes que presenten dolor opresivo como acidez, tienen una mayor probabilidad de terminar sufriendo un evento, a que un paciente que presente un dolor del tipo puntada sufra de uno.</p>
 </div>
 <div id="tabaquismo-e-hipertensión" class="section level2">
 <h2>Tabaquismo e Hipertensión</h2>
-<p>En este gráfico, lo que se muestra es la relación entre la cantidad de personas que sufrieron un Evento, fuman tabaco y son Hipertensas. En cada burbuja se muestra la cantidad de personas que sufren tal característica y si se cruzan, muestra las personas que tienen ambos rasgos.</p>
-<p><img src="index_files/figure-html/grafDeVenn2-1.png" width="576" /></p>
+<p>En cada burbuja se muestra la cantidad de personas que presentan tabaquismo, son hipertensas y padecieron de eventos, respectivamente. En donde se cruzan las burbujas se muestran los casos en común que presentan estas características.</p>
+<p><img src="index_files/figure-html/grafDeVenn2-1.png" width="576" /> A partir de estos datos se puede ver que del total de pacientes que sufrieron un evento cardíaco, el 67% era hipertenso y/o fumaba tabaco. Para ser exactos, el 20.5% solo fumaban tabaco, al igual que el 20.5% eran solo hipertensos, y el 26% fumaban tabaco y eran hipertensos. A partir de esto se puede observar que el ser hipertenso y/o fumar tabaco, tiene una alta incidencia de presentar un evento cardíaco.</p>
 </div>
 <div id="anginosos-vs-múltiples-dolores" class="section level2 unnumbered unnumbered">
 <h2>Anginosos VS Múltiples Dolores</h2>
-<p>En el siguiente gráfico se busca mostrar cuantos pacientes que sufrieron de un Evento, presentan Síndrome Anginoso y cuantos presentan Múltiples Dolores. <img src="index_files/figure-html/angiVSMultDol-1.png" width="576" /></p>
+<p>En el siguiente gráfico se busca mostrar cuántos pacientes que sufrieron de un Evento, presentan Síndrome Anginoso y cuántos presentan Múltiples Dolores.</p>
+<p><img src="index_files/figure-html/angiVSMultDol-1.png" width="576" /> Se observa que el síndrome anginoso presentó una mayor cantidad de eventos que las personas con múltiples dolores, una relación de aproximadamente el doble de eventos.</p>
 </div>
+</div>
+<div id="predictor" class="section level1">
+<h1>Predictor</h1>
+<p>A partir de los datos que analizamos previamente, realizamos un predictor de Eventos Cardíacos. Además, se utilizó el método StepWise, en el que se recorren los datos en ambas direcciones buscando la mayor influencia de los datos, y que terminó arrojando variables muy similares a las que se utilizaron previamente en el análisis. Las variables que terminamos eligiendo son las siguientes:</p>
+<ul>
+<li>Edad</li>
+<li>Antecedentes familiares</li>
+<li>Obesidad</li>
+<li>Síndrome Anginoso</li>
+<li>Diabetes</li>
+<li>Modifica respiración por posición</li>
+<li>Ubicación del dolor</li>
+<li>Tabaquismo</li>
+<li>Mismo dolor a evento previo</li>
+<li>Hipertensión arterial</li>
+<li>Cantidad de episodios</li>
+<li>Síndrome Coronario Agudo previo o historia de revascularización</li>
+<li>Cantidad de dolores</li>
+</ul>
+<p>Para modelar el predictor hemos utilizado un método de regresión logística, el cual se aprovecha para realizar predicciones categóricas, como ocurre en este caso.</p>
+<p>A partir de estos datos se realizó un test utilizando otra cantidad de datos distinta a la que se utilizó para realizar el predictor, lo que es de importancia para poder verificar la eficacia de este.</p>
+<p><img src="index_files/figure-html/pred1-1.png" width="576" /></p>
+<p>Se puede observar, que el predictor presenta una mayor eficacia en diagnosticar correctamente a un verdadero negativo que un verdadero positivo. La principal causa de esto es que, como se presentó al principio del análisis, tan solo un 12% de los datos provistos padecieron de un evento. Aun así, aquí abajo se puede ver que la probabilidad de que nuestro predictor diagnostique un falso positivo es muy baja. Para esto se utilizó la curva AUROC. Esta curva evalúa la precisión de un predictor mediante la ocurrencia de falsos positivos, cuanto mayor sea el valor obtenido de una curva AUROC, mayor va a ser la precisión del predictor.</p>
+<p><img src="index_files/figure-html/pred2-1.png" width="576" /></p>
+<pre><code>[1] 0.8550314</code></pre>
+<p>Como se puede observar la curva AUROC arrojó una eficacia del 85.5%, es decir que, el predictor tan solo tiene un 14.5% de diagnosticar a un falso positivo.</p>
 </div>
 
     </div>
